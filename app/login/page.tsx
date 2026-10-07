@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
-import { CheckSquare, LogIn, Sparkles, AlertCircle } from 'lucide-react'
+import { CheckSquare, LogIn, AlertCircle } from 'lucide-react'
 import { Input } from '@/components/ui/Input'
 
 export default function LoginPage() {
@@ -38,12 +38,6 @@ export default function LoginPage() {
     }
   }
 
-  const fillTestAccount = () => {
-    setEmail('admin@example.com')
-    setPassword('Password123!')
-    setError(null)
-  }
-
   return (
     <div className="max-w-md mx-auto py-12 px-4 sm:px-0">
       <div className="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm">
@@ -54,21 +48,6 @@ export default function LoginPage() {
           </div>
           <h1 className="text-xl font-bold text-slate-900 tracking-tight">Sign In to TaskFlow</h1>
           <p className="text-xs text-slate-500 mt-1">Access your teams, assignments, and collaborative tasks</p>
-        </div>
-
-        {/* Quick Test Account Banner */}
-        <div className="mb-5 p-3 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-blue-600 shrink-0" />
-            <span className="text-blue-900 font-medium">Demo Grader Account</span>
-          </div>
-          <button
-            type="button"
-            onClick={fillTestAccount}
-            className="px-2.5 py-1 text-[11px] font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-2xs transition"
-          >
-            Auto Fill
-          </button>
         </div>
 
         {error && (
