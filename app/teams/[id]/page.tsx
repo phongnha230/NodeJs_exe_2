@@ -264,7 +264,7 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
   if (loading) {
     return (
       <div className="py-24 text-center">
-        <div className="w-8 h-8 mx-auto mb-3 border-2 border-slate-900 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 mx-auto mb-3 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
         <p className="text-xs text-slate-500 font-medium">Synchronizing workspace data...</p>
       </div>
     )
@@ -278,7 +278,7 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
         <p className="text-xs text-slate-500 mb-4">{error || 'Unable to display team details.'}</p>
         <Link
           href="/teams"
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white rounded-xl text-xs font-semibold"
+          className="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md shadow-blue-500/25 transition active:scale-[0.98]"
         >
           <ArrowLeft className="w-3.5 h-3.5" /> Back to Teams
         </Link>
@@ -447,7 +447,7 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
                     className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/70 border border-slate-100"
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
-                      <div className="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center text-[10px] font-bold shrink-0">
+                      <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center text-[10px] font-bold shrink-0 shadow-xs">
                         {m.user.name.charAt(0).toUpperCase()}
                       </div>
                       <div className="min-w-0">
@@ -488,9 +488,9 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
               <button
                 type="button"
                 onClick={() => setIsAddMemberOpen(true)}
-                className="w-full mt-4 py-2 px-3 border border-dashed border-slate-300 hover:border-slate-400 text-slate-600 hover:text-slate-900 font-medium text-xs rounded-xl transition flex items-center justify-center gap-1.5"
+                className="w-full mt-4 py-2 px-3 border border-dashed border-blue-200 hover:border-blue-400 bg-blue-50/30 hover:bg-blue-50 text-blue-700 font-semibold text-xs rounded-xl transition flex items-center justify-center gap-1.5 active:scale-[0.98]"
               >
-                <UserPlus className="w-3.5 h-3.5" />
+                <UserPlus className="w-3.5 h-3.5 text-blue-600" />
                 Invite Member by Email
               </button>
             )}
@@ -508,7 +508,7 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
                   onClick={() => setViewMode('KANBAN')}
                   className={`inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
                     viewMode === 'KANBAN'
-                      ? 'bg-white text-slate-900 shadow-xs'
+                      ? 'bg-white text-blue-700 shadow-xs font-bold'
                       : 'text-slate-500 hover:text-slate-900'
                   }`}
                 >
@@ -520,7 +520,7 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
                   onClick={() => setViewMode('LIST')}
                   className={`inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
                     viewMode === 'LIST'
-                      ? 'bg-white text-slate-900 shadow-xs'
+                      ? 'bg-white text-blue-700 shadow-xs font-bold'
                       : 'text-slate-500 hover:text-slate-900'
                   }`}
                 >
@@ -536,7 +536,7 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
                       key={st}
                       onClick={() => setStatusFilter(st)}
                       className={`px-2.5 py-1 text-[11px] font-semibold rounded-lg transition ${
-                        statusFilter === st ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500'
+                        statusFilter === st ? 'bg-white text-blue-700 shadow-xs' : 'text-slate-500'
                       }`}
                     >
                       {st === 'ALL' ? 'All' : st.replace('_', ' ')}
@@ -549,7 +549,7 @@ export default function TeamDetailPage({ params }: { params: Promise<{ id: strin
             <Button
               onClick={() => setIsCreateTaskOpen(true)}
               size="sm"
-              className="bg-slate-900 hover:bg-slate-800 text-xs gap-1.5"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-md shadow-blue-500/25 text-xs gap-1.5 border-0"
             >
               <Plus className="w-3.5 h-3.5" />
               New Task

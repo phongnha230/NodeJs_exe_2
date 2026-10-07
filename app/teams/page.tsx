@@ -87,7 +87,7 @@ export default function TeamsDashboardPage() {
         </p>
         <Link
           href="/login"
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs rounded-xl shadow-xs transition"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium text-xs rounded-xl shadow-md shadow-blue-500/25 transition active:scale-[0.98]"
         >
           <LogIn className="w-4 h-4" />
           Sign In to Continue
@@ -105,7 +105,7 @@ export default function TeamsDashboardPage() {
             <span className="p-1 rounded-md bg-blue-50 text-blue-600">
               <Users className="w-4 h-4" />
             </span>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-600">
               Multi-tenant Collaboration
             </span>
           </div>
@@ -117,7 +117,7 @@ export default function TeamsDashboardPage() {
           </p>
         </div>
 
-        <Button onClick={() => setIsCreateOpen(true)} className="bg-slate-900 hover:bg-slate-800 text-xs gap-1.5 self-start sm:self-auto">
+        <Button onClick={() => setIsCreateOpen(true)} className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-md shadow-blue-500/25 text-xs gap-1.5 self-start sm:self-auto border-0">
           <Plus className="w-3.5 h-3.5" />
           Create Team
         </Button>

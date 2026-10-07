@@ -49,7 +49,7 @@ export default function LoginPage() {
       <div className="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm">
         {/* Brand Header */}
         <div className="text-center mb-6">
-          <div className="w-10 h-10 mx-auto mb-3 rounded-xl bg-slate-900 text-white flex items-center justify-center shadow-sm">
+          <div className="w-10 h-10 mx-auto mb-3 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-blue-500/25">
             <CheckSquare className="w-5 h-5 stroke-[2.2]" />
           </div>
           <h1 className="text-xl font-bold text-slate-900 tracking-tight">Sign In to TaskFlow</h1>
@@ -100,7 +100,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-2 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl shadow-xs transition-all duration-150 flex items-center justify-center gap-1.5 active:scale-[0.98] disabled:opacity-50"
+            className="w-full mt-2 py-2.5 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-xs rounded-xl shadow-md shadow-blue-500/25 transition-all duration-150 flex items-center justify-center gap-1.5 active:scale-[0.98] disabled:opacity-50"
           >
             <LogIn className="w-4 h-4 stroke-[2.2]" />
             <span>{loading ? 'Authenticating...' : 'Sign In'}</span>

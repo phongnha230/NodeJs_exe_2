@@ -25,14 +25,14 @@ export function Navbar() {
         {/* Brand */}
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white shadow-sm transition group-hover:bg-blue-600">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-sm shadow-blue-500/25 transition group-hover:scale-105">
               <CheckSquare className="w-4 h-4 stroke-[2.5]" />
             </div>
             <div className="flex items-center gap-2">
               <span className="font-bold text-base tracking-tight text-slate-900 group-hover:text-blue-600 transition">
                 TaskFlow
               </span>
-              <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200">
+              <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200/80">
                 Ass 2
               </span>
             </div>
@@ -42,15 +42,15 @@ export function Navbar() {
           <nav className="hidden sm:flex items-center gap-1.5">
             <Link
               href="/"
-              className="px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition"
+              className="px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50/60 rounded-lg transition"
             >
               Overview
             </Link>
             <Link
               href="/teams"
-              className="px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition flex items-center gap-1.5"
+              className="px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50/60 rounded-lg transition flex items-center gap-1.5"
             >
-              <Users className="w-3.5 h-3.5 text-slate-500" />
+              <Users className="w-3.5 h-3.5 text-blue-500" />
               Teams Workspace
             </Link>
           </nav>
@@ -69,7 +69,7 @@ export function Navbar() {
           ) : user ? (
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2 px-2.5 py-1 bg-slate-100 rounded-xl text-xs font-medium text-slate-800 border border-slate-200">
-                <span className="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold">
+                <span className="w-5 h-5 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center text-[10px] font-bold">
                   {user.name.charAt(0).toUpperCase()}
                 </span>
                 <span className="hidden sm:inline font-semibold">{user.name}</span>
@@ -88,16 +88,16 @@ export function Navbar() {
             <div className="flex items-center gap-2">
               <Link
                 href="/login"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 hover:text-slate-900 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg transition shadow-2xs active:scale-[0.98]"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 hover:text-blue-600 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg transition shadow-2xs active:scale-[0.98]"
               >
                 <LogIn className="w-3.5 h-3.5 text-slate-500" />
                 Sign In
               </Link>
               <Link
                 href="/register"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-lg transition shadow-xs active:scale-[0.98]"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-lg transition shadow-sm shadow-blue-500/25 active:scale-[0.98]"
               >
-                <UserPlus className="w-3.5 h-3.5 text-slate-300" />
+                <UserPlus className="w-3.5 h-3.5 text-blue-100" />
                 Register
               </Link>
             </div>

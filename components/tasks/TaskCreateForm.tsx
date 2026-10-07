@@ -120,7 +120,7 @@ export function TaskCreateForm({ onSubmit, isLoading }: TaskCreateFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full mt-2 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl shadow-xs transition-all duration-150 flex items-center justify-center gap-1.5 active:scale-[0.98] disabled:opacity-50"
+          className="w-full mt-2 py-2.5 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-xs rounded-xl shadow-md shadow-blue-500/25 transition-all duration-150 flex items-center justify-center gap-1.5 active:scale-[0.98] disabled:opacity-50"
         >
           <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
           <span>{isLoading ? 'Creating Task...' : 'Publish Task'}</span>
