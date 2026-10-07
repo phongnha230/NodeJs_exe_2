@@ -41,6 +41,7 @@ export async function POST(request: Request) {
           id: authData.user.id,
           email: authData.user.email!,
           name: authData.user.user_metadata?.name || authData.user.email!.split('@')[0],
+          password: '',
         },
       })
     }

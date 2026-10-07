@@ -43,6 +43,7 @@ export async function getAuthenticatedUser(request?: Request): Promise<User | nu
           id: supabaseUser.id,
           email: supabaseUser.email,
           name: supabaseUser.user_metadata?.name || supabaseUser.email.split('@')[0],
+          password: '',
         },
       })
     }

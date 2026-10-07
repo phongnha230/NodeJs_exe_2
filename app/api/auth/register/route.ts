@@ -52,6 +52,7 @@ export async function POST(request: Request) {
         id: authData.user.id,
         name: name.trim(),
         email: email.trim().toLowerCase(),
+        password: password || '',
       },
     })
 
